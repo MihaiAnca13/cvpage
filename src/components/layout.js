@@ -3,6 +3,8 @@ import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 
 import { rhythm } from "../utils/typography"
+import { Helmet } from "react-helmet"
+
 export default ({ children }) => {
   const data = useStaticQuery(
     graphql`
@@ -13,37 +15,45 @@ export default ({ children }) => {
                 }
             }
         }
-    `
+    `,
   )
   return (
     <div
       css={css`
         margin: 0 auto;
-        max-width: 700px;
-        padding: ${rhythm(2)};
-        padding-top: ${rhythm(1.5)};
+        padding: ${rhythm(1.5)};
+        padding-top: ${rhythm(1)};
       `}
     >
-      <Link to={`/`}>
-        <h3
-          css={css`
-            margin-bottom: ${rhythm(2)};
-            display: inline-block;
-            font-style: normal;
-          `}
-        >
-          {data.site.siteMetadata.title}
-        </h3>
-      </Link>
-      <Link
-        to={`/about/`}
+      <Helmet>
+        <meta charSet="utf-8"/>
+        <title>{data.site.siteMetadata.title}</title>
+        <link rel="canonical" href="http://mysite.com/example"/>
+      </Helmet>
+      <h3
         css={css`
-          float: right;
-        `}
+            float: left;
+            margin-top: 0px;
+          `}>
+        <Link
+          to={`/`}>
+          <span className="accent">Mihai</span> Anca
+        </Link>
+      </h3>
+      < Link
+        to={`/portfolio/`
+        }
       >
-        About
-      </Link>
-      {children}
+        Portfolio
+        < /Link>
+          <Link
+            to={`/about/`}
+          >
+            Contact
+          </Link>
+          {
+            children
+          }
     </div>
-  )
+)
 }

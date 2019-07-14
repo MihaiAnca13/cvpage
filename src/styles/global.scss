@@ -1,0 +1,33 @@
+$primary: #1C768F;
+$secondary: #032539;
+$base: #FBF3F2;
+$accent: #FA991C;
+
+a:link, a:visited {
+    margin-left: 1rem;
+    padding: 0.1rem;
+    float: right;
+    text-decoration: none;
+    background-image: none;
+    color: $base;
+}
+
+a:hover {
+    color: $accent;
+}
+
+.accent {
+  color: $accent;
+}
+
+a {
+    text-shadow: none;
+}
+
+html {
+    background-color: $secondary;
+}
+
+h1, h2, h3, h4, h5 {
+    color: $base;
+}
