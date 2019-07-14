@@ -18,42 +18,39 @@ export default ({ children }) => {
     `,
   )
   return (
-    <div
-      css={css`
-        margin: 0 auto;
-        padding: ${rhythm(1.5)};
-        padding-top: ${rhythm(1)};
-      `}
-    >
+    <div>
       <Helmet>
         <meta charSet="utf-8"/>
         <title>{data.site.siteMetadata.title}</title>
         <link rel="canonical" href="http://mysite.com/example"/>
       </Helmet>
-      <h3
-        css={css`
+      <header>
+        <h2
+          css={css`
             float: left;
             margin-top: 0px;
           `}>
-        <Link
-          to={`/`}>
-          <span className="accent">Mihai</span> Anca
-        </Link>
-      </h3>
-      < Link
-        to={`/portfolio/`
-        }
-      >
-        Portfolio
-        < /Link>
-          <Link
-            to={`/about/`}
-          >
-            Contact
+          <Link to={`/`}>
+            <span className="accent">Mihai</span> Anca
           </Link>
-          {
-            children
-          }
+        </h2>
+        <Link to={`/portfolio/`}>
+          Portfolio
+        </Link>
+        <Link
+          to={`/about/`}
+        >
+          Contact
+        </Link>
+      </header>
+      <main>
+      {
+        children
+      }
+      </main>
+      <footer>
+        © <strong>Mihai Anca</strong> 2019
+      </footer>
     </div>
-)
+  )
 }

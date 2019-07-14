@@ -31,3 +31,62 @@ html {
 h1, h2, h3, h4, h5 {
     color: $base;
 }
+
+header {
+    width: 100%;
+    background: $secondary;
+    z-index: 10;
+    border-bottom: $base solid 1px;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 0.8rem 1.5rem;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container2 {
+    width: fit-content;
+    margin: 1.2rem;
+    z-index: 1;
+}
+
+#home {
+    position: relative;
+    height: 90vh;
+    min-height: 480px;
+    width: 100vw;
+    background-color: $secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $base;
+}
+
+#home a {
+    float: left;
+    z-index: 1;
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 600px) {
+    #home p {
+        padding-right: 30vw;
+    }
+}
+
+#home p {
+    font-size: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 1rem;
+    background-color: $base;
+}
+
+main {
+    min-height: 80vh;
+}
