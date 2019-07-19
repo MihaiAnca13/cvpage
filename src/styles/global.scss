@@ -3,17 +3,21 @@ $secondary: #032539;
 $base: #FBF3F2;
 $accent: #FA991C;
 
+.base {
+  color: $base;
+}
+
 a:link, a:visited {
-    margin-left: 1rem;
-    padding: 0.1rem;
-    float: right;
-    text-decoration: none;
-    background-image: none;
-    color: $base;
+  margin-left: 1rem;
+  padding: 0.1rem;
+  float: right;
+  text-decoration: none;
+  background-image: none;
+  color: $base;
 }
 
 a:hover {
-    color: $accent;
+  color: $accent;
 }
 
 .accent {
@@ -21,72 +25,165 @@ a:hover {
 }
 
 a {
-    text-shadow: none;
+  text-shadow: none;
 }
 
 html {
-    background-color: $secondary;
-}
-
-h1, h2, h3, h4, h5 {
-    color: $base;
+  background-color: $secondary;
 }
 
 header {
-    width: 100%;
-    background: $secondary;
-    z-index: 10;
-    border-bottom: $base solid 1px;
-    display: inline-block;
-    margin: 0 auto;
-    padding: 1rem 1.5rem 0.8rem 1.5rem;
+  width: 100%;
+  background: $secondary;
+  z-index: 10;
+  border-bottom: $base solid 1px;
+  display: inline-table;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0.8rem 1.5rem;
+}
+
+p {
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 auto;
+  padding: 10px 0px;
+  color: $secondary;
+}
+
+h1 {
+  font-size: 3rem
 }
 
 .container {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .container2 {
-    width: fit-content;
-    margin: 1.2rem;
-    z-index: 1;
+  width: fit-content;
+  margin: 0 0 0 3%;
+  z-index: 1;
 }
 
 #home {
-    position: relative;
-    height: 90vh;
-    min-height: 480px;
-    width: 100vw;
-    background-color: $secondary;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: $base;
+  position: relative;
+  height: 90vh;
+  min-height: 480px;
+  background-color: $secondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $base;
 }
 
 #home a {
-    float: left;
-    z-index: 1;
-    font-size: 2rem;
+  float: left;
+  z-index: 1;
+  font-size: 2rem;
+  display: flex;
 }
 
 @media only screen and (min-width: 600px) {
-    #home p {
-        padding-right: 30vw;
-    }
+  #home p {
+    padding-right: 30vw;
+  }
 }
 
 #home p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 footer {
-    text-align: center;
-    font-size: 1rem;
-    background-color: $base;
+  text-align: center;
+  font-size: 1rem;
+  background-color: $base;
 }
 
 main {
-    min-height: 80vh;
+  min-height: 90vh;
+  background-color: $base;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+}
+
+span.skill {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.01rem 0.75rem;
+  margin: 0 0.25rem 0.25rem 0;
+  color: #fff;
+  background: lighten($primary, 10%);
+  border-radius: 5px;
+  transition: 0.2s;
+  cursor: default;
+  &:hover {
+    background: $primary;
+  }
+  &.blue {
+    background: #1671cf;
+    &:hover {
+      background: darken(#1671cf, 10%);
+    }
+  }
+  &.orange {
+    background: $secondary;
+    &:hover {
+      background: darken($secondary, 10%);
+    }
+  }
+  &.green {
+    background: #64cf16;
+    &:hover {
+      background: darken(#64cf16, 10%);
+    }
+  }
+  &.red {
+    background: #d03333;
+    &:hover {
+      background: darken(#d03333, 10%);
+    }
+  }
+}
+
+.button {
+  background: $base;
+  border: 2px solid $primary;
+  color: $primary !important;
+  padding: 0.5rem 2rem !important;
+  border-radius: 99px;
+  margin: 1rem 0;
+  transition: 0.2s;
+  display: inline-block;
+  text-decoration: none;
+  &:hover {
+    background: $primary;
+    color: $base !important;
+  }
+  &.download {
+    text-align: center;
+    margin: 0 auto;
+    float: none !important;
+  }
+}
+
+hr {
+  box-sizing: content-box;
+  overflow: visible;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: calc(1.45rem - 1px);
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 1px;
+  margin-bottom: calc(1.45rem - 1px);
+  background: $secondary;
+  border: none;
+  height: 1px;
 }

@@ -4,8 +4,7 @@ import Layout from "../components/layout";
 
 const NotFoundPage = () => (
   <Layout>
-    <title>404 Not Found</title>
-    <div className="container" style={{ marginTop: "2rem" }}>
+    <div className="container">
       <h1>
         Oh no<span className="accent">!</span>
       </h1>

@@ -127,7 +127,7 @@ export default ({ data }) => {
             zIndex: 0,
           }}/>
         <div className="container">
-          <h1>
+          <h1 className="base">
             <Typed
               loop
               typeSpeed={80}

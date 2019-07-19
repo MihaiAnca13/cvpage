@@ -40,7 +40,7 @@ export default ({ children }) => {
         <Link
           to={`/about/`}
         >
-          Contact
+          About
         </Link>
       </header>
       <main>
@@ -49,7 +49,7 @@ export default ({ children }) => {
       }
       </main>
       <footer>
-        © <strong>Mihai Anca</strong> 2019
+        © <strong>Mihai Anca</strong> {(new Date().getFullYear())}
       </footer>
     </div>
   )
