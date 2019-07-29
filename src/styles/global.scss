@@ -85,6 +85,12 @@ h1 {
   display: flex;
 }
 
+.container a {
+  float: none !important;
+  display: inherit;
+  color: $primary !important;
+}
+
 @media only screen and (min-width: 600px) {
   #home p {
     padding-right: 30vw;

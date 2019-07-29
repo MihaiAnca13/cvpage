@@ -1,8 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
-
-import { rhythm } from "../utils/typography"
 import { Helmet } from "react-helmet"
 
 export default ({ children }) => {
