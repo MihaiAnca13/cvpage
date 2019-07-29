@@ -7,7 +7,7 @@ export default ({ data }) => {
   console.log(data);
   let nodes = data.allDirectory.edges;
   nodes = nodes.map((item, key) =>
-    <Link to={"/"+item.node.name} key={key}>{item.node.name}</Link>
+    <Link to={"/portfolio/"+item.node.name} key={key}>{item.node.name}</Link>
   )
 
   return (

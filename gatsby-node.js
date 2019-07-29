@@ -8,7 +8,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: "/portfolio"+slug,
     })
   } else if (node.internal.type === `Directory` && node.relativeDirectory === `projects`) {
     const slug = createFilePath({ node, getNode, basePath: `projects` })
