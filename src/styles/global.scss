@@ -89,6 +89,7 @@ h1 {
   float: none !important;
   display: inherit;
   color: $primary !important;
+  margin-left: 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -192,4 +193,26 @@ hr {
   background: $secondary;
   border: none;
   height: 1px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.wrapper .portfolio-item {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+.wrapper .portfolio-item:hover {
+  opacity: 1 !important;
+}
+
+.wrapper .portfolio-item a {
+  color: $base !important;
 }

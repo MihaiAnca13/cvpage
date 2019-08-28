@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import { Link } from "@reach/router"
 
 export default ({ data }) => {
-  let project_name;
+  let project_name = "";
   let nodes = data.allMarkdownRemark.edges;
   nodes = nodes.map((item, key) => {
     let aPath = item.node.fileAbsolutePath;
@@ -16,6 +16,11 @@ export default ({ data }) => {
 
     return (<Link to={p} key={key}>{item.node.frontmatter.title}</Link>)
   })
+
+  if (project_name === "") {
+    project_name = "This project is empty"
+  }
+
   return (
     <Layout>
       <div  className="container">
