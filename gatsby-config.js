@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Mihai Test a longer name"
+    title: "Mihai"
   },
   plugins: [
     {

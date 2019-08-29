@@ -1,3 +1,4 @@
+const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const path = require(`path`)
 
@@ -17,6 +18,29 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: "/portfolio" + slug,
     })
+
+    let rawFile = new XMLHttpRequest();
+    let allText = "";
+
+    rawFile.open("GET", 'file://'+node.absolutePath+'/description', false);
+
+    rawFile.onreadystatechange = function ()
+    {
+      if(rawFile.readyState === 4)
+      {
+        if(rawFile.status === 200 || rawFile.status == 0)
+        {
+          allText = rawFile.responseText;
+          createNodeField({
+            node,
+            name: `description`,
+            value: allText,
+          })
+        }
+      }
+    }
+
+    rawFile.send(null);
   }
 }
 
