@@ -195,3 +195,15 @@ hr {
   border: none;
   height: 1px;
 }
+
+code {
+  background-color: white;
+  border: 1px solid #d8c1c19c;
+  border-radius: 0.1em;
+  padding: 0.1em 0.2em 0.1em 0.2em;
+}
+
+.md-holder {
+  border: 1px solid $primary;
+  padding: 2em;
+}

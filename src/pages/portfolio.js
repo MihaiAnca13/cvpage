@@ -30,7 +30,7 @@ export default ({ data }) => {
   let nodes = data.allDirectory.edges
   nodes = nodes.map((item, key) => {
     let name = item.node.name;
-    name = name.replace(/-/g, " ");
+    name = name.replace(/_/g, " ");
 
     return (
       <Grid item xs={12} sm={12} md={6} lg={3} xl={2} key={key}>
@@ -48,7 +48,7 @@ export default ({ data }) => {
               <Typography gutterBottom variant="h5" component="h2" className={classes.color}>
                 {name}
               </Typography>
-              <Typography variant="body2" color="#FBF3F2" component="p">
+              <Typography variant="body2" component="p">
                 {item.node.fields.description}
               </Typography>
             </CardContent>
