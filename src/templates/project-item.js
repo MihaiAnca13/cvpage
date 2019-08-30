@@ -43,6 +43,9 @@ const useStyles = makeStyles(theme => ({
     border: "1px solid #1C768F",
     borderTop: "0px"
   },
+  item: {
+    paddingBottom: "0.5em"
+  }
 }))
 
 export default ({ data, location }) => {
@@ -67,7 +70,7 @@ export default ({ data, location }) => {
     const p = "/portfolio/" + aPath[aPath.length - 2] + "/" + aux;
 
     return (
-      <div key={key}>
+      <div key={key} className={classes.item}>
         <Link to={p}>
           <Card className={classes.card}>
             <CardActionArea>

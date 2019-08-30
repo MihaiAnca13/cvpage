@@ -57,3 +57,4 @@ You can insert any block inside a list, you have to respect the indentation of t
       
       **world!**
   
+![Alt text](/images/projects/Mihai/image.png?raw=true "Title")
