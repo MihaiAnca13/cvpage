@@ -12,13 +12,16 @@ export default () => (
       <div className="grid">
         <div className="column a">
           <p>
-            Stuff about me
+            Interests: robotics, machine learning, AI
           </p>
           <p>
-            That probably no one cares about
+            Favourite language: Python
           </p>
           <p>
-            But needs to be here so it impresses people
+            Frameworks I work in: PyTorch, Keras, Tensorflow 2, ROS
+		  </p>
+		  <p>
+			Tools I know how to use: Linux, rviz, gazebo, MySQL, docker, git, raspberry pi, Arduino
           </p>
         </div>
         <div className="column b">

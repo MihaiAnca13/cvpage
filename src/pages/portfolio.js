@@ -20,7 +20,8 @@ const useStyles = makeStyles(theme => ({
     color: "#FBF3F2 !important"
   },
   cardMedia: {
-    marginBottom: "0 !important"
+    marginBottom: "0 !important",
+	objectFit: "scale-down"
   }
 }))
 
